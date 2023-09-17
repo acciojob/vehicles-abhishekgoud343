@@ -27,6 +27,23 @@ public class F1 extends Car {
 
         if(newSpeed > 0) {
             changeSpeed(newSpeed, getCurrentDirection());
+
+            int gear;
+
+            if (newSpeed <= 50)
+                gear = 1;
+            else if (newSpeed <= 100)
+                gear = 2;
+            else if (newSpeed <= 150)
+                gear = 3;
+            else if (newSpeed <= 200)
+                gear = 4;
+            else if (newSpeed <= 250)
+                gear = 5;
+            else
+                gear = 6;
+
+            this.changeGear(gear);
         }
     }
 }
